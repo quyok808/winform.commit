@@ -1,0 +1,8 @@
+D:\tai lieu\c#\OOP\QLXe\obj\Debug\QLXe.csproj.AssemblyReference.cache
+D:\tai lieu\c#\OOP\QLXe\obj\Debug\QLXe.csproj.SuggestedBindingRedirects.cache
+D:\tai lieu\c#\OOP\QLXe\obj\Debug\QLXe.csproj.CoreCompileInputs.cache
+D:\tai lieu\c#\OOP\QLXe\bin\Debug\QLXe.exe.config
+D:\tai lieu\c#\OOP\QLXe\bin\Debug\QLXe.exe
+D:\tai lieu\c#\OOP\QLXe\bin\Debug\QLXe.pdb
+D:\tai lieu\c#\OOP\QLXe\obj\Debug\QLXe.exe
+D:\tai lieu\c#\OOP\QLXe\obj\Debug\QLXe.pdb

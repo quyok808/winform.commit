@@ -1,0 +1,8 @@
+D:\tai lieu\c#\OOP\QLSV\bin\Debug\QLSV.exe.config
+D:\tai lieu\c#\OOP\QLSV\bin\Debug\QLSV.exe
+D:\tai lieu\c#\OOP\QLSV\bin\Debug\QLSV.pdb
+D:\tai lieu\c#\OOP\QLSV\obj\Debug\QLSV.csproj.AssemblyReference.cache
+D:\tai lieu\c#\OOP\QLSV\obj\Debug\QLSV.csproj.SuggestedBindingRedirects.cache
+D:\tai lieu\c#\OOP\QLSV\obj\Debug\QLSV.csproj.CoreCompileInputs.cache
+D:\tai lieu\c#\OOP\QLSV\obj\Debug\QLSV.exe
+D:\tai lieu\c#\OOP\QLSV\obj\Debug\QLSV.pdb
