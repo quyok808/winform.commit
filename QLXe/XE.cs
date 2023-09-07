@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,9 @@ namespace QLXe
     { 
         protected DateTime ngaySX;
         private BIENSO bs = new BIENSO();
-        protected string BienSo;
+        private string bienSo;
+
+        
 
         #region Constructor
         public XE(DateTime NgaySX, int MaTinh, string seri)
@@ -24,7 +27,7 @@ namespace QLXe
         }
         #endregion
 
-        
+        public string BienSo { get => bienSo; set => bienSo = value; }
         public virtual void input()
         { 
             Console.WriteLine("Nhap vao ngay thang nam san xuat: ");
@@ -35,8 +38,8 @@ namespace QLXe
             ma_tinh = int.Parse(Console.ReadLine());
             Console.WriteLine("Nhap ma seri: ");
             seri = Console.ReadLine();
-            //BienSo = bs.Create_BS(ma_tinh, seri);
-            BienSo = bs.Create_BSDep(ma_tinh, seri,"99997");
+            BienSo = bs.Create_BS(ma_tinh, seri);
+            //BienSo = bs.Create_BSDep(ma_tinh, seri, "99997");
         }
 
         public virtual void output()
@@ -45,9 +48,24 @@ namespace QLXe
             Console.Write("Bien so: {0}\n", BienSo);
         }
 
-        public bool Check_Bien_Dep()
+        public XE check_BSDep()
         {
-            
+            if (bs.check_BS() == true)
+            {
+                return this;
+            }
+            return null;
+        }
+
+        public virtual long TienDangKiem()
+        {
+            return -1;
+        }
+
+        public virtual DateTime ThoiGianDangKiemDK()
+        {
+            DateTime v = DateTime.Now;
+            return v;
         }
     }
 }

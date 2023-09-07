@@ -35,7 +35,38 @@ namespace QLXe
 
         public void List_BienSoXe_Dep()
         {
-            
+            List<XE> kq3 = new List<XE>();
+            foreach (var item in ds)
+            {
+                if (item.check_BSDep() != null)
+                {
+                    kq3.Add(item);
+                }
+            }
+            if (kq3.Count == 0) { Console.WriteLine("Khong co xe co bien so dep!!!"); }
+            kq3.ForEach(x => { x.output(); Console.WriteLine("---------"); });
+        }
+
+        public void TinhTienDK()
+        {
+            ds.ForEach(x =>
+            {
+                Console.WriteLine("Bien so: {0} co tong tien dang kiem la {1}",x.BienSo,x.TienDangKiem());
+            });
+        }
+
+        public void TongTienDK()
+        {
+            long tong = ds.Sum(x => x.TienDangKiem());
+            Console.WriteLine("Tong tien dang kiem la: {0}", tong);
+        }
+
+        public void TinhTGDangKiemDinhKi()
+        {
+            ds.ForEach(x =>
+            {
+                Console.WriteLine("Bien so: {0} se dang kiem lan toi vao ngay {1}", x.BienSo, x.ThoiGianDangKiemDK().ToString());
+            });
         }
     }
 }

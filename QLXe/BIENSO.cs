@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,7 +32,7 @@ namespace QLXe
  
         private static Random generator = new Random();
 
-        public string randomAlphaNumeric(int numberOfCharactor)
+        public string randomNumeric(int numberOfCharactor)
         {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < numberOfCharactor; i++)
@@ -51,7 +52,7 @@ namespace QLXe
         public string Create_BS(int MaTinh, string seri)
         {
             string BS = MaTinh.ToString() + seri + "-";
-            songaunhien = randomAlphaNumeric(5);
+            songaunhien = randomNumeric(5);
             return BS + songaunhien;
         }
 
@@ -60,6 +61,25 @@ namespace QLXe
             string BS = MaTinh.ToString() + seri + "-";
             songaunhien = socuoi;
             return BS + songaunhien;
+        }
+
+        public bool check_BS()
+        {
+            int n = songaunhien.Length;
+            int dem = 0;
+            char x = songaunhien[2];
+            for (int i = 0; i < n-1; i++)
+            {
+                if (songaunhien[i] == x)
+                {
+                    dem++;
+                }
+            }
+            if (dem >= 4)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
